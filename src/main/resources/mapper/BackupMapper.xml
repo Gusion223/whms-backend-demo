@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whms.mapper.BackupMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.whms.entity.Backup">
+        <id column="bid" property="bid" />
+        <result column="id" property="id" />
+        <result column="auto_create" property="autoCreate" />
+        <result column="btime" property="btime" />
+        <result column="bdesc" property="bdesc" />
+        <result column="bfilepath" property="bfilepath" />
+        <result column="btype" property="btype" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        bid, id, auto_create, btime, bdesc, bfilepath, btype
+    </sql>
+    <select id="pageLJoinUser" resultType="com.whms.entity.vo.BackupUserVO">
+        select bid, b.id, auto_create, btime, bdesc, bfilepath, btype, user_name FROM backup b
+        LEFT JOIN user u ON b.id = u.id
+        <if test="date!=null and date!=''">
+            where DATE(btime)=#{date}
+        </if>
+    </select>
+
+
+</mapper>

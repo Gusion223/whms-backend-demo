@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whms.mapper.TransferOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.whms.entity.TransferOrder">
+        <id column="toid" property="toid" />
+        <result column="id" property="id" />
+        <result column="wid_prev" property="widPrev" />
+        <result column="wid_cur" property="widCur" />
+        <result column="totime" property="totime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        toid, id, wid_prev, wid_cur, totime
+    </sql>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whms.mapper.SaleDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.whms.entity.SaleDetail">
+        <id column="soid" property="soid" />
+        <result column="gid" property="gid" />
+        <result column="sdamount" property="sdamount" />
+        <result column="sdtotal"  property="sdtotal" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        soid, gid, sdamount, sdtotal
+    </sql>
+
+</mapper>
