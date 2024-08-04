@@ -2,7 +2,7 @@
 
 这是一个数据库的课程设计，题目是仓库管理系统，此处是后端的相关内容
 
-前端部分:[https://github.com/Gusion223/Vue-Demo](https://github.com/Gusion223/Vue-Demo)
+前端部分:[https://github.com/Gusion223/whms-vue-demo](https://github.com/Gusion223/whms-vue-demo)
 
 后端部分:[https://github.com/Gusion223/whms-backend-demo/tree/main](https://github.com/Gusion223/whms-backend-demo/tree/main)
 
