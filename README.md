@@ -17,3 +17,4 @@
 ### 配置
 后端使用mysql8.0做为数据库
 请自行在src/main/resources/application.yml 修改相应的配置信息
+需要将mysqldump 加入系统路径中
